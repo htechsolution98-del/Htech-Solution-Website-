@@ -8,6 +8,12 @@
     "start": "next start",
     "lint": "eslint"
   },
+  "scripts": {
+  "dev": "next dev",
+  "build": "opennextjs-cloudflare build",
+  "start": "next start",
+  "lint": "eslint"
+},
   "dependencies": {
     "@gsap/react": "^2.1.2",
     "@react-three/drei": "^10.7.8",
