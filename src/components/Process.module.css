@@ -1,0 +1,109 @@
+.processTimeline {
+  display: flex;
+  position: relative;
+  padding: 60px 20px 40px;
+  gap: 60px;
+}
+
+.pStep {
+  position: relative;
+  width: 320px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  z-index: 1;
+}
+
+/* The connecting line between steps */
+.pStep::before {
+  content: '';
+  position: absolute;
+  top: 11px; /* 12px (half dot) minus 1px (half line height) = 11px */
+  left: 32px; /* 20px margin-left + 12px half dot = 32px */
+  width: calc(100% + 60px); /* spans card width + flex gap */
+  height: 2px;
+  background: var(--line-strong);
+  z-index: -1;
+}
+
+/* Remove the line connecting outwards from the last step */
+.lastStep::before {
+  display: none;
+}
+
+.pStep::after {
+  content: '';
+  position: absolute;
+  top: 11px;
+  left: 32px;
+  width: calc(100% + 60px);
+  height: 2px;
+  background: linear-gradient(90deg, var(--blue), var(--violet));
+  opacity: 0.3;
+  z-index: -1;
+}
+
+.lastStep::after {
+  display: none;
+}
+
+/* The glowing node on the path */
+.dot {
+  width: 24px;
+  height: 24px;
+  background: var(--bg-0);
+  border: 3px solid var(--blue);
+  border-radius: 50%;
+  margin-bottom: 32px;
+  margin-left: 20px;
+  position: relative;
+  box-shadow: 0 0 12px rgba(37, 99, 235, 0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  z-index: 2;
+}
+
+.pStep:hover .dot {
+  transform: scale(1.2);
+  box-shadow: 0 0 20px rgba(37, 99, 235, 0.8);
+  background: var(--blue-soft);
+}
+
+.contentBox {
+  background: var(--glass-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--line);
+  padding: 28px 24px;
+  border-radius: 16px;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.pStep:hover .contentBox {
+  transform: translateY(-4px);
+  border-color: var(--blue-soft);
+}
+
+.pNum {
+  font-family: var(--mono);
+  font-size: 12.5px;
+  letter-spacing: 0.05em;
+  color: var(--blue);
+  margin-bottom: 12px;
+  display: block;
+  font-weight: 600;
+}
+
+.pStep h3 {
+  font-family: var(--display);
+  font-size: 18px;
+  margin-bottom: 12px;
+  color: var(--text-0);
+  line-height: 1.3;
+}
+
+.pStep p {
+  font-size: 14px;
+  color: var(--text-1);
+  line-height: 1.6;
+}

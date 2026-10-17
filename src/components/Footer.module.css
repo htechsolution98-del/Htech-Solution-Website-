@@ -1,0 +1,130 @@
+.footer {
+  padding: 100px 0 30px;
+  background: var(--bg-1);
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.megaCta {
+  text-align: center;
+  padding: 60px 0 100px;
+  border-bottom: 1px solid var(--line);
+  margin-bottom: 60px;
+}
+
+.megaCta h2 {
+  font-family: var(--display);
+  font-size: clamp(32px, 5vw, 56px);
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  margin-bottom: 24px;
+}
+
+.megaCta p {
+  font-size: 18px;
+  color: var(--text-1);
+  max-width: 600px;
+  margin: 0 auto 40px;
+}
+
+
+.footerGrid {
+  display: grid;
+  grid-template-columns: 1.4fr 0.8fr 0.8fr 1.1fr;
+  gap: 50px;
+  padding-bottom: 50px;
+}
+
+.footerBrand p {
+  margin-top: 16px;
+  font-size: 14px;
+  max-width: 280px;
+}
+
+.footerCol h5 {
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-2);
+  margin-bottom: 18px;
+}
+
+.footerCol a,
+.footerCol span {
+  display: block;
+  font-size: 14px;
+  color: var(--text-1);
+  margin-bottom: 11px;
+}
+
+.footerCol a:hover {
+  color: var(--cyan);
+}
+
+.footerBottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 26px;
+  border-top: 1px solid var(--line);
+  font-size: 13px;
+  color: var(--text-2);
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.socials {
+  display: flex;
+  gap: 16px;
+}
+
+.socials a {
+  color: var(--text-2);
+  font-family: var(--mono);
+  font-size: 13px;
+}
+
+.socials a:hover {
+  color: var(--cyan);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--display);
+  font-weight: 700;
+  font-size: 19px;
+  letter-spacing: -0.01em;
+}
+
+.logoMark {
+  width: 34px;
+  height: 34px;
+  border-radius: 9px;
+  background: var(--grad);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--mono);
+  font-weight: 600;
+  font-size: 15px;
+  color: #fff;
+}
+
+@media (max-width: 980px) {
+  .footerGrid {
+    grid-template-columns: 1fr 1fr;
+    row-gap: 40px;
+  }
+}
+
+@media (max-width: 560px) {
+  .footerGrid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,33 @@
+.ctaBand {
+  border-radius: 22px;
+  padding: 70px 60px;
+  text-align: center;
+  background: radial-gradient(ellipse 700px 300px at 50% -20%, rgba(37, 99, 235, 0.15), transparent 70%),
+    linear-gradient(180deg, var(--bg-1), var(--bg-0));
+  border: 1px solid var(--line-strong);
+  position: relative;
+  overflow: hidden;
+}
+
+.ctaBand h2 {
+  max-width: 680px;
+  margin: 0 auto 16px;
+}
+
+.ctaBand :global(.lead) {
+  margin: 0 auto 34px;
+  max-width: 520px;
+}
+
+.ctaActions {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 560px) {
+  .ctaBand {
+    padding: 50px 24px;
+  }
+}
